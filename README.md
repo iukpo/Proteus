@@ -60,6 +60,8 @@ Anti-disassembly can only be applied to assignment statements (Ex.: z=x+y)
 
 Opaque predicates come from Douglas Low's master's thesis, Java Control Flow Obfuscation.
 
+HECalc, a reverse Polish notation calculator that uses HELib, was an inspiration on figuring out how to use HELib. It can be obtained [Here](https://code.google.com/archive/p/thep/downloads).
+
 ## License
 
 Proteus is distributed under the terms of the [GNU General Public License] [5] (GPL).
