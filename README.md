@@ -26,7 +26,7 @@ First, FHE.a must be built. To do this, simply go into the HElib_proteus/src fol
 
 ## How to use
 
-java Proteus {number of times to run} {full path to target source code}
+**java Proteus {number of times to run} {full path to target source code}**
 
 During the course of execution, Proteus will build and run an assitant program, intcomparetest, to create public and private keys for homomorphic encryption, as well as encrypt the sensitive data.
 
