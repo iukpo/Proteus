@@ -1,0 +1,45 @@
+Anti-disassembly mark format:
+
+<antidisasm>
+<platform>{gcc-x86,java}</platform>
+<inputs>
+<input>
+<inputname>{variable name}</inputname>
+<inputdatatype>{char, byte, int}</inputdatatype>
+</input>
+...
+</inputs>
+<statementtype>{value assignment}</statementtype>
+<howtocompile>{Makefile}</howtocompile>
+</antidisasm>
+
+
+Anti-debugging declaration mark format:
+<antidebug>
+<platform>{gcc-x86}</platform>
+<statementtype>{declaration, ifeq}</statementtype>
+<inputs>
+<input><inputname>{variable name}</inputname>
+<inputdatatype>{char, byte, int}</inputdatatype>
+<inputval>{value of variable}</inputval>
+</input>
+</inputs>
+<howtocompile>{Makefile}</howtocompile>
+</antidebug>
+
+
+Anti-debugging equality comparison mark format:
+<antidebug>
+<platform>{gcc-x86}</platform>
+<statementtype>{ifeq}</statementtype>
+<inputs>
+<input>
+<inputname>{variable name}</inputname>
+<inputdatatype>{int}</inputdatatype>
+<inputtype>{var, hidethis}</inputtype>
+<inputval>{if inputtype is hidethis, this is the value to be hidden}</inputval>
+</input>
+...
+</inputs>
+<howtocompile>{Makefile}</howtocompile>
+</antidebug>
