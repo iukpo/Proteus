@@ -6,7 +6,7 @@ Proteus is an anti-reverse engineering system that provides protection from disa
 
 First, the software author must provide "marks", comments in the code indicating where Proteus should apply a particular protection. The mark should indicate what kind of protection is desired. The mark needs to be placed directly above the line in the code that needs protection. 
 
-Once the marks have been placed, Proteus can be run. The target source code is copied to a working folder. Proteus inserts randomly chosen opaque predicates and either dynamically created inward jumps (C/C++ only) or altered function calls (Java only) into target source code at anti-disassembly marks. 
+Once the marks have been placed, Proteus can be run. The target source code is copied to a working folder. Proteus inserts randomly chosen opaque predicates and either dynamically created inward jumps (C/C++ only) or altered function calls (Java only) into target source code at anti-disassembly marks. These predicates provide control flow obfuscation.
 
 Proteus anti-debugging code is designed to protect sensitive data from being visible in memory and takes the form of a two step process involving homomorphic encryption. First, the variable to be protected is marked. This anti-debug mark tells Proteus the name of the variable containing the sensitive data and the value of that variable. Proteus removes references to this variable and replaces them with references to an encrypted file containing the data. The sensitive data is then stored in the encrypted file. Then, the operation involving this variable is marked, and replaced with an equivalent function that encrypts input and uses homomorphic encryption to compare the encrypted input with the encypted file content; Because neither value is decrypted for the operation, an attacker cannot use a debugger to ascertain the sensitive data.
 
@@ -56,8 +56,10 @@ Anti-disassembly can only be applied to assignment statements (Ex.: z=x+y)
 
 ## Credits
 
-Opaque predicates come from Douglas Low's paper 
+[HELib](https://github.com/shaih/HElib) is written by Shai Halevi.
+
+Opaque predicates come from Douglas Low's master's thesis, Java Control Flow Obfuscation.
 
 ## License
 
-Proteus is distributed under the terms of the [GNU General Public License] [5] (GPL). For more information see the [GitHub Pages] [9].
+Proteus is distributed under the terms of the [GNU General Public License] [5] (GPL).
