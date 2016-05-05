@@ -64,4 +64,4 @@ HECalc, a reverse Polish notation calculator that uses HELib, was an inspiration
 
 ## License
 
-Proteus is distributed under the terms of the [GNU General Public License] [5] (GPL).
+Proteus is distributed under the terms of the [GNU General Public License] (GPL).
