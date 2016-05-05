@@ -1,0 +1,1 @@
+Proteusassistant generates the public and private keys necessary for homomorphic encryption and encrypts sensitive data from source code. It can also be used to verify that the homomorphic comparison function works.
