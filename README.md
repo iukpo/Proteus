@@ -16,7 +16,7 @@ Proteus is designed to be run more than once on a target source; each time Prote
 
 ## Dependencies
 
-Proteus relies on an informal "fork" of [HELib](https://github.com/shaih/HElib), an implementation of homomorphic encryption. This fork provides the functions that replace the function calls that involve sensitive data. The functions are contained within a static library (FHE.a) built from the fork, and the fork provides headers for these functions.
+Proteus relies on an informal "fork" of [HELib](https://github.com/shaih/HElib), an implementation of homomorphic encryption. This fork is called HELib_Proteus and is contained within this repo. This fork provides the implementation for the functions that replace the function calls that involve sensitive data. The functions are contained within a static library (FHE.a) built from the fork, and the fork provides headers for these functions.
 
 C/C++ programs that use anti-debugging protection must link against the static library mentioned above and the GNU Multiple Precision Arithmetic Library.
 
